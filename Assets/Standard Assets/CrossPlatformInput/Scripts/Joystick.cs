@@ -25,7 +25,9 @@ namespace UnityStandardAssets.CrossPlatformInput
 		CrossPlatformInputManager.VirtualAxis m_HorizontalVirtualAxis; // Reference to the joystick in the cross platform input
 		CrossPlatformInputManager.VirtualAxis m_VerticalVirtualAxis; // Reference to the joystick in the cross platform input
 
-		void OnEnable()
+		//Changed the function name from OnEnable to Start in order so that jostick always return to its original position
+		//Got the idea from a tutorial on youtube (channel:Devin Curry)-thank you
+		void Start() 
 		{
 			m_StartPos = transform.position;
 			CreateVirtualAxes();
