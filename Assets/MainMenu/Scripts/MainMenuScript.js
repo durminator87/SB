@@ -15,6 +15,12 @@ function StartGame ()
 Application.LoadLevel("Level1");
 
 }
+
+function MainMenu ()
+{
+Application.LoadLevel("MainMenu");
+
+}
 //this function exits the game
 function ExitGame () 
 {
