@@ -1,34 +1,18 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System;
+using UnityEngine;
 
-public class LoadNextLevel : MonoBehaviour {
-	private bool PlayerInZone;
-	public string levelToLoad;
-
-	// Use this for initialization
-	void Start () {
-		PlayerInZone = false;
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		if (PlayerInZone) {
-			Application.LoadLevel(levelToLoad);
-		}
-	
-	}
-	void OnTriggerEnter2D(Collider2D other)
+namespace UnityStandardAssets._2D
+{
+	public class LoadNextLevel : MonoBehaviour
 	{
-		if (other.name == "Player") {
-			PlayerInZone=true;
-		}
+		public string NextLevelName;
 
-	}
-	void OnTriggerExit2D(Collider2D other)
-	{
-		if (other.name == "Player") {
-			PlayerInZone=false;
+		private void OnTriggerEnter2D(Collider2D other)
+		{
+			if (other.tag == "Player")
+			{
+				Application.LoadLevel(NextLevelName);
+			}
 		}
-		
 	}
 }
