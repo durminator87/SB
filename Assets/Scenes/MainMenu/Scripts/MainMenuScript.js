@@ -2,6 +2,9 @@
 var panelCreditCanvas : Canvas;
 var infoOpen = false;
 
+var panelSettingsCanvas : Canvas;
+var settingsOpen = false;
+
 function Start () {
 
 }
@@ -34,5 +37,19 @@ function InfoPanel ()
 	{
 		infoOpen=false;
 		panelCreditCanvas.enabled=false;
+	}
+}
+
+function SettingsPanel () 
+{
+	if (settingsOpen == false)
+	{
+		settingsOpen=true;
+		panelSettingsCanvas.enabled=true;
+	}
+	else if (settingsOpen == true)
+	{
+		settingsOpen=false;
+		panelSettingsCanvas.enabled=false;
 	}
 }
