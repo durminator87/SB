@@ -1,4 +1,4 @@
-﻿#pragma strict
+#pragma strict
 var panelCreditCanvas : Canvas;
 var infoOpen = false;
 
